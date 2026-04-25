@@ -390,13 +390,11 @@ section p + p {
     font-size: 1.2rem;
 }
 
-#skusenosti ul,
-#kontakt ul {
+#skusenosti ul{
     padding-left: 1.1rem;
 }
 
-#skusenosti li,
-#kontakt li {
+#skusenosti li{
     margin-bottom: 0.6rem;
 }
 
@@ -622,13 +620,27 @@ section p + p {
     margin-bottom: 1rem;
 }
 
+#kontakt ul {
+    list-style: none; /* Skryje klasické odrážky */
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Presná medzera medzi riadkami */
+}
+
+#kontakt li {
+    display: flex;
+    align-items: center; /* Toto presne vycentruje ikonku a text na jednu os */
+    gap: 0.8rem; /* Medzera medzi ikonkou a textom */
+}
+
 .kontakt-ikona {
     width: 22px;
     height: 22px;
     max-width: 24px;
     object-fit: contain;
 
-    transform: translateY(5px);
+    transform: translateY(1px);
 }
 
 footer {
