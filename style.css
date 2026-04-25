@@ -263,8 +263,8 @@ section p + p {
     padding: 4.7rem 2.2rem 3.8rem;
     text-align: center;
     background:
-        radial-gradient(circle at top right, rgba(120, 161, 139, 0.22), transparent 52%),
-        radial-gradient(circle at bottom left, rgba(44, 62, 80, 0.08), transparent 45%),
+        radial-gradient(circle at top right, rgba(120, 161, 139, 0.24), transparent 52%),
+        radial-gradient(circle at bottom left, rgba(44, 62, 80, 0.12), transparent 45%),
         var(--section-bg);
 }
 
@@ -623,6 +623,7 @@ section p + p {
 .kontakt-ikona {
     width: 22px;
     height: 22px;
+    max-width: 24px;
     object-fit: contain;
 
     transform: translateY(5px);
