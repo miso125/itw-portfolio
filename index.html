@@ -44,8 +44,15 @@
 
         <section id="o-mne" data-label="02">
             <h2>O mne</h2>
-            <p>Som študent 3. ročníka Informačných technológií na VUT FIT. Počas štúdia som nadobudol kvalitné znalosti nízkoúrovňových princípov (C, C++, OS), ktoré dnes rád kombinujem s moderným webovým vývojom (Vue.js, SQL). Mám za sebou niekoľko tímových projektov pokrývajúcich celý životný cyklus softvéru od návrhu architektúry až po nasadenie.</p>
-            <p>Keď práve nesedím za kódom, rád trávim čas aktívne. Medzi moje hlavné záujmy patria rôzne športy, hra na gitare a spoznávanie nových technológií. Rád si vyčistím hlavu v prírode, či už ide o letné výlety alebo turistiku.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Som študent 3. ročníka Informačných technológií na VUT FIT. Počas štúdia som nadobudol kvalitné znalosti nízkoúrovňových princípov (C, C++, OS), ktoré dnes rád kombinujem s moderným webovým vývojom (Vue.js, SQL). Mám za sebou niekoľko tímových projektov pokrývajúcich celý životný cyklus softvéru od návrhu architektúry až po nasadenie.</p>
+                    <p>Keď práve nesedím za kódom, rád trávim čas aktívne. Medzi moje hlavné záujmy patria rôzne športy, hra na gitare a spoznávanie nových technológií. Rád si vyčistím hlavu v prírode, či už ide o letné výlety alebo turistiku.</p>
+                </div>
+                <div class="about-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Horská príroda" class="hobby-photo">
+                </div>
+            </div>
         </section>
 
         <section id="skusenosti" data-label="03">
@@ -86,43 +93,63 @@
 
         <section id="projekty" data-label="04">
             <h2>Vybrané projekty</h2>
-            <article>
-                <p class="project-era">2025</p>
-                <h3>Informačný systém pre vinárstvo</h3>
-                <p>Full-stack aplikácia na správu produktov, objednávok a interných procesov vinárstva.</p>
-                <p><strong>Moja rola:</strong> návrh databázy, backend logika a frontend rozhranie.</p>
-                <p><strong>Výzva:</strong> navrhnúť prehľadný systém pre viac typov používateľov a scenárov.</p>
-                <p><strong>Výsledok:</strong> funkčný prototyp pokrývajúci kľúčové procesy od evidencie po správu dát.</p>
-                <div class="project-tags"><span>PHP</span><span>MySQL</span><span>HTML/CSS</span></div>
+            
+            <article class="project-card">
+                <div class="project-info">
+                    <p class="project-era">2025</p>
+                    <h3>Informačný systém pre vinárstvo</h3>
+                    <p>Full-stack aplikácia na správu produktov, objednávok a interných procesov vinárstva.</p>
+                    <p><strong>Výzva:</strong> Navrhnúť prehľadný systém pre viac typov používateľov.</p>
+                    <div class="project-tags"><span>PHP</span><span>MySQL</span><span>HTML/CSS</span></div>
+                </div>
+                <div class="project-image">
+                    <img src="https://ichef.bbci.co.uk/images/ic/1024xn/p017b1n4.jpg.webp" alt="Ukážka systému vinárstva">
+                </div>
             </article>
-            <article>
-                <p class="project-era">2024</p>
-                <h3>Filtrujúci DNS resolver</h3>
-                <p>DNS server implementovaný v C++ s podporou filtrovania domén podľa pravidiel.</p>
-                <p><strong>Moja rola:</strong> implementácia jadra resolvera a logiky whitelist/blacklist.</p>
-                <p><strong>Výzva:</strong> spojiť správnosť DNS odpovedí s efektívnym filtrovacím mechanizmom.</p>
-                <p><strong>Výsledok:</strong> stabilná aplikácia schopná dynamicky vyhodnocovať domény podľa politík.</p>
-                <div class="project-tags"><span>C++</span><span>DNS</span><span>Networking</span></div>
+
+            <article class="project-card">
+                <div class="project-info">
+                    <p class="project-era">2024</p>
+                    <h3>Filtrujúci DNS resolver</h3>
+                    <p>DNS server implementovaný v C++ s podporou filtrovania domén podľa pravidiel.</p>
+                    <p><strong>Výzva:</strong> Efektívny filtrovací mechanizmus v reálnom čase.</p>
+                    <div class="project-tags"><span>C++</span><span>DNS</span><span>Networking</span></div>
+                </div>
+                <div class="project-image">
+                    <img src="https://www.xcitium.com/blog/wp-content/uploads/2025/08/how-to-change-dns-server.png" alt="Ukážka sieťového kódu">
+                </div>
             </article>
-            <article>
-                <p class="project-era">2024</p>
-                <h3>Webová Navigácia</h3>
-                <p>Interaktívna webová aplikácia s mapovými podkladmi a dátami získavanými cez API.</p>
-                <p><strong>Moja rola:</strong> návrh UI, integrácia mapy a napojenie na backendové endpointy.</p>
-                <p><strong>Výzva:</strong> zosúladiť rýchlu interakciu mapy s čitateľným a responzívnym rozhraním.</p>
-                <p><strong>Výsledok:</strong> plynulá aplikácia s intuitívnym ovládaním a zmysluplnou vizualizáciou dát.</p>
-                <div class="project-tags"><span>Vue.js</span><span>Node.js</span><span>REST API</span></div>
+
+            <article class="project-card">
+                <div class="project-info">
+                    <p class="project-era">2024</p>
+                    <h3>Webová Navigácia</h3>
+                    <p>Interaktívna webová aplikácia s mapovými podkladmi a dátami získavanými cez API.</p>
+                    <p><strong>Výzva:</strong> Responzívna vizualizácia dát nad mapou.</p>
+                    <div class="project-tags"><span>Vue.js</span><span>Node.js</span><span>REST API</span></div>
+                </div>
+                <div class="project-image">
+                    <img src="https://img.freepik.com/premium-vector/application-navigation-there-is-destination-arrive-destination-gps-map_403715-36.jpg" alt="Ukážka webovej navigácie">
+                </div>
             </article>
         </section>
 
         <section id="kontakt" data-label="05">
             <h2>Kontakt</h2>
-            <p>Ak vás môj profil zaujal, neváhajte ma kontaktovať:</p>
+            <p>Ak Vás môj profil zaujal, neváhajte ma kontaktovať:</p>
             <ul>
-                <li>Email: <a href="mailto:migo.senderak@gmail.com">migo.senderak@gmail.com</a></li>
-                <li>Telefón: <a href="tel:+421902211121">+421 902 211 121</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/michal-senderák-1a33b7355">Michal Senderák</a></li>
-                <li>GitHub: <a href="https://github.com/miso125">miso125</a></li>
+                <li>
+                    <img src="img/email.svg" alt="Email ikona" class="kontakt-ikona">
+                    <a href="mailto:migo.senderak@gmail.com">migo.senderak@gmail.com</a></li>
+                <li>
+                    <img src="img/telephone.svg" alt="Telefón ikona" class="kontakt-ikona">
+                    <a href="tel:+421902211121">+421 902 211 121</a></li>
+                <li>
+                    <img src="img/linkedin.svg" alt="LinkedIn ikona" class="kontakt-ikona">
+                    <a href="https://www.linkedin.com/in/michal-senderák-1a33b7355">Michal Senderák</a></li>
+                <li>
+                    <img src="img/github.svg" alt="Github ikona" class="kontakt-ikona">
+                    <a href="https://github.com/miso125">miso125</a></li>
             </ul>
         </section>
     </main>
@@ -135,7 +162,6 @@
         const menuToggle = document.getElementById('menu-toggle');
         const glassDock = document.getElementById('glass-dock');
         const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('main section');
 
         menuToggle.addEventListener('click', () => {
             const isOpen = glassDock.classList.toggle('is-open');
@@ -148,28 +174,6 @@
                 menuToggle.setAttribute('aria-expanded', 'false');
             });
         });
-
-        const sectionObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) {
-                        return;
-                    }
-
-                    const activeId = entry.target.getAttribute('id');
-                    navLinks.forEach((link) => {
-                        const isActive = link.getAttribute('href') === `#${activeId}`;
-                        link.classList.toggle('is-active', isActive);
-                    });
-                });
-            },
-            {
-                rootMargin: '-35% 0px -55% 0px',
-                threshold: 0.2
-            }
-        );
-
-        sections.forEach((section) => sectionObserver.observe(section));
     </script>
 </body>
 </html>
