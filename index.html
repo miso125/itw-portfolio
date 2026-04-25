@@ -18,6 +18,7 @@
 <!-- Body -->
 <body>
     <header id="main-nav">
+        <button id="menu-toggle" aria-label="Prepnúť navigáciu" aria-controls="glass-dock" aria-expanded="false">Menu</button>
         <nav id="glass-dock">
             <ul>
                 <li><a href="#uvod" class="nav-link" aria-label="Domov">Domov</a></li>
@@ -30,56 +31,91 @@
     </header>
 
     <main>
-        <section id="uvod">
-            <h1>Michal Senderák</h1>
+        <section id="uvod" data-label="01">
+            <h1><a href="https://miso125.github.io/itw-portfolio/" target="_blank" rel="noopener noreferrer">Michal Senderák</a></h1>
             <h2>Software Developer & IT Študent na VUT FIT</h2>
-            <p>Hľadám pracovnú pozíciu, kde môžem riešiť komplexné technické výzvy.</p>
+            <p>Zaujímam sa o prepojenie systémového programovania a moderného webového vývoja. Najviac ma baví navrhovať riešenia, ktoré sú technicky premyslené, prehľadné a použiteľné v praxi.</p>
+            <div class="profile-flags">
+                <span>Brno / SK</span>
+                <span>System + Web Mindset</span>
+                <span>Code & Design Balance</span>
+            </div>
         </section>
 
-        <section id="o-mne">
+        <section id="o-mne" data-label="02">
             <h2>O mne</h2>
             <p>Som študent 3. ročníka Informačných technológií na VUT FIT. Počas štúdia som nadobudol kvalitné znalosti nízkoúrovňových princípov (C, C++, OS), ktoré dnes rád kombinujem s moderným webovým vývojom (Vue.js, SQL). Mám za sebou niekoľko tímových projektov pokrývajúcich celý životný cyklus softvéru od návrhu architektúry až po nasadenie.</p>
             <p>Keď práve nesedím za kódom, rád trávim čas aktívne. Medzi moje hlavné záujmy patria rôzne športy, hra na gitare a spoznávanie nových technológií. Rád si vyčistím hlavu v prírode, či už ide o letné výlety alebo turistiku.</p>
         </section>
 
-        <section id="skusenosti">
+        <section id="skusenosti" data-label="03">
             <h2>Znalosti a Vzdelanie</h2>
             
             <article>
                 <h3>Vzdelanie</h3>
-                <ul>
-                    <li><strong>Vysoké učení technické v Brne (Fakulta informačních technologií)</strong> - od 2023</li>
-                    <li><strong>Katolícka spojená škola sv. Mikuláša</strong> (Osemročné gymnázium) - 2015-2023</li>
+                <ul class="timeline">
+                    <li>
+                        <span class="timeline-year">2023 - súčasnosť</span>
+                        <strong>Vysoké učení technické v Brne</strong>
+                        <p>Fakulta informačních technologií, štúdium Informačných technológií.</p>
+                    </li>
+                    <li>
+                        <span class="timeline-year">2015 - 2023</span>
+                        <strong>Katolícka spojená škola sv. Mikuláša</strong>
+                        <p>Osemročné gymnázium so zameraním na matematiku a informatiku.</p>
+                    </li>
                 </ul>
             </article>
 
             <article>
                 <h3>Technické zručnosti</h3>
-                <ul>
-                    <li><strong>Programovacie jazyky:</strong> Python, C, C++, PHP, VHDL, SQL, Assembly</li>
-                    <li><strong>Webové technológie:</strong> Vue.js, Node.js, React, Express, REST API</li>
-                    <li><strong>Nástroje:</strong> Git, Github, Figma, Docker, Wireshark, Cypress</li>
-                </ul>
+                <p class="stack-label">Programovacie jazyky</p>
+                <div class="stack-badges">
+                    <span>Python</span><span>C</span><span>C++</span><span>PHP</span><span>VHDL</span><span>SQL</span><span>Assembly</span>
+                </div>
+                <p class="stack-label">Webové technológie</p>
+                <div class="stack-badges">
+                    <span>Vue.js</span><span>Node.js</span><span>React</span><span>Express</span><span>REST API</span><span>HTML5</span><span>CSS3</span>
+                </div>
+                <p class="stack-label">Nástroje</p>
+                <div class="stack-badges">
+                    <span>Git</span><span>GitHub</span><span>Docker</span><span>Figma</span><span>Wireshark</span><span>Cypress</span>
+                </div>
             </article>
         </section>
 
-        <section id="projekty">
+        <section id="projekty" data-label="04">
             <h2>Vybrané projekty</h2>
             <article>
+                <p class="project-era">2025</p>
                 <h3>Informačný systém pre vinárstvo</h3>
-                <p>Návrh a implementácia full-stack webového systému pre správu vinárstva s využitím PHP, MySQL a HTML/CSS.</p>
+                <p>Full-stack aplikácia na správu produktov, objednávok a interných procesov vinárstva.</p>
+                <p><strong>Moja rola:</strong> návrh databázy, backend logika a frontend rozhranie.</p>
+                <p><strong>Výzva:</strong> navrhnúť prehľadný systém pre viac typov používateľov a scenárov.</p>
+                <p><strong>Výsledok:</strong> funkčný prototyp pokrývajúci kľúčové procesy od evidencie po správu dát.</p>
+                <div class="project-tags"><span>PHP</span><span>MySQL</span><span>HTML/CSS</span></div>
             </article>
             <article>
+                <p class="project-era">2024</p>
                 <h3>Filtrujúci DNS resolver</h3>
-                <p>Implementácia DNS servera v C++ schopného filtrovať domény na základe whitelist/blacklist pravidiel.</p>
+                <p>DNS server implementovaný v C++ s podporou filtrovania domén podľa pravidiel.</p>
+                <p><strong>Moja rola:</strong> implementácia jadra resolvera a logiky whitelist/blacklist.</p>
+                <p><strong>Výzva:</strong> spojiť správnosť DNS odpovedí s efektívnym filtrovacím mechanizmom.</p>
+                <p><strong>Výsledok:</strong> stabilná aplikácia schopná dynamicky vyhodnocovať domény podľa politík.</p>
+                <div class="project-tags"><span>C++</span><span>DNS</span><span>Networking</span></div>
             </article>
             <article>
+                <p class="project-era">2024</p>
                 <h3>Webová Navigácia</h3>
-                <p>Vývoj interaktívnej frontend aplikácie s využitím mapových podkladov (Vue.js, Node.js, REST API).</p>
+                <p>Interaktívna webová aplikácia s mapovými podkladmi a dátami získavanými cez API.</p>
+                <p><strong>Moja rola:</strong> návrh UI, integrácia mapy a napojenie na backendové endpointy.</p>
+                <p><strong>Výzva:</strong> zosúladiť rýchlu interakciu mapy s čitateľným a responzívnym rozhraním.</p>
+                <p><strong>Výsledok:</strong> plynulá aplikácia s intuitívnym ovládaním a zmysluplnou vizualizáciou dát.</p>
+                <div class="project-tags"><span>Vue.js</span><span>Node.js</span><span>REST API</span></div>
             </article>
         </section>
 
-        <section id="kontakt">
+        <section id="kontakt" data-label="05">
             <h2>Kontakt</h2>
             <p>Ak vás môj profil zaujal, neváhajte ma kontaktovať:</p>
             <ul>
@@ -95,5 +131,45 @@
         <p>&copy; 2026 Michal Senderák. Vytvorené v rámci projektu ITW.</p>
     </footer>
 
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const glassDock = document.getElementById('glass-dock');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('main section');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = glassDock.classList.toggle('is-open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                glassDock.classList.remove('is-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        const sectionObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    const activeId = entry.target.getAttribute('id');
+                    navLinks.forEach((link) => {
+                        const isActive = link.getAttribute('href') === `#${activeId}`;
+                        link.classList.toggle('is-active', isActive);
+                    });
+                });
+            },
+            {
+                rootMargin: '-35% 0px -55% 0px',
+                threshold: 0.2
+            }
+        );
+
+        sections.forEach((section) => sectionObserver.observe(section));
+    </script>
 </body>
 </html>
