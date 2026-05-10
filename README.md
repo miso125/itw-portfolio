@@ -1,40 +1,42 @@
-# Projekt ITW - Osobné portfólio
+# Technická správa k projektu ITW: Osobné portfólio
 
-**Autor:** Michal Senderák
+**Autor:** Michal Senderák  
 **Login:** xsendem00  
 **URL projektu:** [https://miso125.github.io/itw-portfolio/](https://miso125.github.io/itw-portfolio/)
 
 ---
 
-## 1. Popis riešenia
-Tento projekt predstavuje moju osobnú profilovú prezentáciu vytvorenú v rámci predmetu ITW na FIT VUT. Web je navrhnutý ako **"Single Page"** aplikácia s dôrazom na čistý, moderný dizajn a vysokú používateľskú prívetivosť (UX).
+## 1. Popis a architektúra riešenia
+Predmetom projektu je návrh a implementácia profilovej webovej prezentácie vo forme "Single Page" aplikácie. Architektúra riešenia je zameraná na čistý vizuálny štýl, responzivitu a dodržiavanie moderných webových štandardov.
 
-### Technická implementácia:
-* **Sémantické HTML5:** Kód využíva štruktúrne prvky ako `<header>`, `<nav>`, `<main>`, `<section>` a `<article>`, čo zabezpečuje prístupnosť a zrozumiteľnosť obsahu aj bez štýlov.
-* **Moderné CSS:** * Rozloženie stránky je realizované pomocou **Flexboxu** (striedavé zobrazenie projektov, kontaktný zoznam) a **CSS Gridu** (sekcia skúseností).
-    * Implementovaný je **"Glass Dock"** (navigácia s efektom matného skla) s využitím vlastnosti `backdrop-filter`.
-    * Web je plne **responzívny**, prispôsobený pre mobilné zariadenia pomocou Media Queries a dynamického hamburger menu.
-* **Plynulý pohyb:** Pre navigáciu medzi sekciami je aktivovaný **smooth scrolling**.
-* **Vizuálne prvky:** Použité sú reálne screenshoty mojich projektov a tematické fotografie.
+Aplikácia je rozdelená do šiestich hlavných informačných sekcií, čím dostatočne popisuje referovanú osobu. Navigácia medzi sekciami je riešená prostredníctvom globálneho fixného navigačného panela s implementáciou plynulého prechodu (smooth scrolling).
 
----
+## 2. Technická špecifikácia
+Projekt je realizovaný výlučne pomocou natívnych technológií bez použitia externých CSS frameworkov (ako napr. Bootstrap), čím preukazuje porozumenie základným princípom.
 
-## 2. Využitie umelej inteligencie (AI)
-V súlade so zadaním projektu som pri vývoji využil pomoc jazykového modelu (LLM) ako osobného mentora a konzultanta.
+* **Sémantické HTML5:** Kód je štruktúrovaný pomocou sémantických značiek (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`). Toto riešenie zabezpečuje logické členenie dokumentu, prístupnosť a plnú srozumiteľnosť obsahu aj bez podpory kaskádových štýlov. Výsledný kód bol overený W3C validátorom.
+* **Kaskádové štýly (CSS3):**
+  * **Layout:** Rozloženie obsahu je implementované kombináciou modulov **CSS Flexbox** (striedavé radenie prvkov, zarovnanie navigácie) a **CSS Grid** (responzívna mriežka v sekcii skúseností a "Bento Box" usporiadanie záujmov).
+  * **Responzivita a adaptabilita:** Dizajn je plne responzívny s využitím `media queries` pre korektné zobrazenie na mobilných zariadeniach (vrátane implementácie "hamburger menu").
+  * **Vizuálny štýl:** Bol navrhnutý konzistentný pastelový farebný koncept riadený pomocou CSS premenných. Súčasťou návrhu je implementácia efektu matného skla ("Glassmorphism") cez vlastnosť `backdrop-filter` a optimalizácia kontrastu textu na grafických pozadiach za pomoci vrstvenia a prechodov (linear-gradient).
+  * **Mikrointerakcie:** Do užívateľského rozhrania boli integrované jemné CSS animácie a hover efekty pre zvýraznenie aktívnych prvkov (transformácie, tieňovanie).
+* **JavaScript:** Využitý bol výlučne minimálny "Vanilla JS" kód pre riadenie stavov (otváranie/zatváranie) mobilného navigačného menu.
 
-### Oblasti využitia:
-1.  **Návrh štruktúry:** AI pomohlo s logickým členením piatich povinných sekcií a návrhom podsekcií v časti "Skúsenosti".
-2.  **Vizuálny koncept:** Pomoc pri definovaní pastelovej farebnej palety pomocou CSS premenných a konzultácia mikrointerakcií (hover efekty, animácie).
-3.  **Optimalizácia a ladenie:** Riešenie problémov s vykresľovaním obrázkov na GitHub Pages pomocou vlastností `aspect-ratio` a `object-fit`.
-4.  **Kontrola sémantiky:** Overenie správneho použitia HTML značiek pre dosiahnutie validity kódu.
+## 3. Využitie umelej inteligencie (AI)
+Jazykové modely boli využívané prevažne ako všeobecne podporný nástroj pri návrhu, testovaní a vylaďovaní riešenia. Bol využívaný prevažne na objasnenie princípov, návrhy možných spôsobov štýlov a návrh originálneho riešenia.
 
-**Prehlásenie:** Všetok kód, ktorý bol navrhnutý s pomocou AI, som podrobil analýze, upravil pre svoje potreby a plne mu rozumiem. Projekt je mojím vlastným dielom a som pripravený ho obhájiť.
+**Oblasti asistencie AI:**
+1. **Architektúra CSS:** Konzultácia matematických a syntaktických pravidiel pri návrhu asymetrického rozloženia (CSS Grid span) pre sekciu s vizuálnou galériou (Bento Box layout).
+2. **Ladenie a optimalizácia (Debugging):** Detekcia a oprava anomálií pri vykresľovaní rôznorodých formátov obrázkov. Výsledkom bolo korektné nasadenie vlastností `aspect-ratio` a `object-fit` pre zachovanie geometrie kontajnerov.
+3. **Generovanie CSS vzorov:** Asistencia pri návrhu kľúčových snímok (`@keyframes`) pre plynulé animácie pozadia a štruktúrovanie CSS prechodov (gradient text).
 
----
 
-## 3. Zoznam sekcií
-1.  **Domov:** Základné informácie a motto.
-2.  **O mne:** Profil so zameraním na štúdium a záľuby.
-3.  **Skúsenosti:** Podsekcie pre vzdelanie a technické zručnosti.
-4.  **Projekty:** Ukážky reálnej tvorby s popismi a technológiami.
-5.  **Kontakt:** Kontaktné údaje doplnené o vektorové ikony.
+
+## 4. Štruktúra prezentácie
+Webová prezentácia je vnútorne členená na nasledujúce sekcie:
+1. **Úvod:** Identifikácia, primárne zameranie a hlavný nadpis fungujúci ako absolútny odkaz na umiestnenie webu.
+2. **O mne:** Profilové informácie.
+3. **Skúsenosti:** Technické a študijné zručnosti, obsahujúce vnútorné podsekcie (Vzdelanie, Technológie).
+4. **Projekty:** Vizualizované ukážky technických prác.
+5. **Záujmy:** Grafická sekcia doplnená o fotografie voľne dostupné na internete.
+6. **Kontakt:** Odkazy na externé siete a komunikačné kanály.
